@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/img">
+        <file>disk.png</file>
+        <file>folder.png</file>
+        <file>note.png</file>
+        <file>page.png</file>
+    </qresource>
+    <qresource prefix="/audio">
+        <file>mariosleepc.mp3</file>
+    </qresource>
+</RCC>
