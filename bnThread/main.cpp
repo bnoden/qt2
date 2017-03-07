@@ -2,6 +2,7 @@
 #include "bnthread.h"
 
 #include <QTextStream>
+#include <QString>
 
 void await() {
     QTextStream in(stdin);
@@ -17,14 +18,12 @@ int main(int argc, char *argv[])
     QCoreApplication a(argc, argv);
 
     BnThread bThread1;
-    bThread1.name = "bThread1";
-
+    bThread1.name = "bt1";
     BnThread bThread2;
-    bThread2.name = "bThread2";
-
+    bThread2.name = "bt2";
     BnThread bThread3;
-    bThread3.name = "bThread3";
-
+    bThread3.name = "bt3";
+/*
     await();
     bThread1.start();
     await();
@@ -41,6 +40,13 @@ int main(int argc, char *argv[])
     await();
 
     _exit(0);
+*/
+
+    bThread1.start();
+    bThread2.start();
+    bThread3.start();
+
+
 
     return a.exec();
 }

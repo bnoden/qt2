@@ -8,9 +8,11 @@ BnThread::BnThread()
 }
 
 void BnThread::run() {
-    qDebug() << this->name << 0b01;
+    for (int i = 0x001; i < 0x3E8; i++) {
+        qDebug() << this->name << i;
+    }
 }
 
 void BnThread::quit() {
-    qDebug() << this->name << 0b00;
+    qDebug() << this->name << 0x000;
 }
