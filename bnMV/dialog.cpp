@@ -10,7 +10,7 @@ Dialog::Dialog(QWidget *parent) :
     model = new QStringListModel(this);
 
     QStringList bnList;
-    bnList << "STM" << "AVR" << "TMC4123" << "PIC";
+    bnList << "STM" << "AVR" << "TM4C123" << "PIC";
     std::sort(bnList.begin(), bnList.end());
 
     model->setStringList(bnList);
@@ -29,7 +29,7 @@ Dialog::~Dialog()
 }
 void Dialog::on_btnAdd_clicked()
 {
-    quint8 row = model->rowCount();
+    quint16 row = model->rowCount();
     model->insertRows(row, 1);
     QModelIndex index = model->index(row);
     ui->listView->setCurrentIndex(index);
@@ -39,7 +39,7 @@ void Dialog::on_btnAdd_clicked()
 
 void Dialog::on_btnInsert_clicked()
 {
-    quint8 row = ui->listView->currentIndex().row();
+    quint16 row = ui->listView->currentIndex().row();
     model->insertRows(row, 1);
     QModelIndex index = model->index(row);
     ui->listView->setCurrentIndex(index);
@@ -53,6 +53,5 @@ void Dialog::on_btnDelete_clicked()
 
 void Dialog::on_btnSort_clicked()
 {
-    quint8 row = model->rowCount();
-    model->sort(row);
+    model->sort(model->rowCount());
 }
