@@ -11,6 +11,8 @@ Dialog::Dialog(QWidget *parent) :
     model->setReadOnly(false);
 
     ui->treeView->setModel(model);
+
+    model->sort(0);
 }
 
 Dialog::~Dialog()
