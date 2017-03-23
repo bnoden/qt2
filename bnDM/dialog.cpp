@@ -31,3 +31,8 @@ void Dialog::on_btnRmdir_clicked()
 {
 
 }
+
+void Dialog::on_btnCancel_clicked()
+{
+    this->close();
+}

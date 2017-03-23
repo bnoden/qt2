@@ -25,6 +25,8 @@ private slots:
 
     void on_btnRmdir_clicked();
 
+    void on_btnCancel_clicked();
+
 private:
     Ui::Dialog *ui;
     QDirModel *model;
